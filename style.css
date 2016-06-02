@@ -14,7 +14,7 @@ body {
 }
 
 #intro {
-  padding: 100px 0 200px;
+  padding: 100px 0 150px;
   color: white;
   background: #F89F39;
 }
@@ -39,24 +39,52 @@ body {
   font-size: 3em;
   margin-top: -200px;
   font-family: 'Pacifico', cursive;
-
 }
 
-div#people {
-  padding: 100px 0;
+.social {
+  text-align: center;
+  margin: 50px;
+}
+
+.social div {
+  border: 2px solid black;
+}
+
+.social a {
+  margin: 5px;
+  color: #333;
+  font-size: 3.5em;
+}
+
+#people {
+  padding: 10px 0 50px;
   margin: 50px;
   background: white;
+}
+
+#people {
+  font-family: 'Ruda', sans-serif;
+  font-size: 2.0em;
 }
 
 #people span {
   display: inline-block;
   list-style: none;
-  font-size: 3em;
   padding: 16px;
-  font-family: 'Ruda', sans-serif;
   background: #f2f2f2;
   border-radius: 4px;
   margin: 20px;
+}
+
+#faq {
+  padding: 0 200px;
+  text-align: left;
+  font-size: 1.4em;
+}
+
+#faq h3 {
+  font-family: 'Bree Serif', sans-serif;
+
 }
 
 a {
