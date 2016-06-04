@@ -7,10 +7,17 @@ body {
   font-family: 'Lora', serif;
 }
 
-#header {
-  background: white;
-  height: 0;
-  margin: 0;
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:vistited {
+  color: #555;
 }
 
 #intro {
@@ -41,28 +48,10 @@ body {
   font-family: 'Pacifico', cursive;
 }
 
-.social {
-  text-align: center;
-  margin: 50px;
-}
-
-.social div {
-  border: 2px solid black;
-}
-
-.social a {
-  margin: 5px;
-  color: #333;
-  font-size: 3.5em;
-}
-
 #people {
   padding: 10px 0 50px;
   margin: 50px;
   background: white;
-}
-
-#people {
   font-family: 'Ruda', sans-serif;
   font-size: 2.0em;
 }
@@ -84,22 +73,34 @@ body {
 
 #faq h3 {
   font-family: 'Bree Serif', sans-serif;
-
 }
 
-a {
-  color: #555;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:vistited {
-  color: #555;
+#faq a {
+  color: white;
+  background: #F89F39;
+  padding: 2px 4px;
 }
 
 #map {
   clear: both;
+  padding: 0 200px;
+}
+
+#social {
+  border-top: 5px solid #f2f2f2;
+  padding-top: 50px;
+  margin: 100px 200px;
+  text-align: center;
+  font-family: 'Ruda', sans-serif;
+  font-size: 2.0em;
+}
+
+#social div {
+  border: 2px solid black;
+}
+
+#social a {
+  margin: 5px;
+  color: #333;
+  font-size: 1.7em;
 }
