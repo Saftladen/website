@@ -21,28 +21,12 @@ a:vistited {
 }
 
 #intro {
-  padding: 100px 0 150px;
+  padding: 100px 0 100px;
   color: white;
   background: #F89F39;
 }
 
-#intro h1 {
-  font-size: 14em;
-  color: white;
-  font-weight: 500;
-  font-family: 'Bree Serif', serif;
-  text-shadow: 0px 3px #F35601;
-}
-
-#intro h1 #first{
-  letter-spacing: -0.05em;
-}
-
-#intro h1 #second{
-  letter-spacing: +0.05em;
-}
-
-#intro p {
+#intro div {
   font-size: 3em;
   margin-top: -200px;
   font-family: 'Pacifico', cursive;
@@ -91,8 +75,6 @@ a:vistited {
 }
 
 #social {
-  border-top: 5px solid #f2f2f2;
-  padding-top: 50px;
   margin: 100px 200px;
   text-align: center;
   font-family: 'Ruda', sans-serif;
@@ -107,4 +89,16 @@ a:vistited {
   margin: 5px;
   color: #333;
   font-size: 1.7em;
+}
+
+#gamecollectives {
+  margin: 20px;
+}
+
+#gamecollectives a {
+  background: black;
+  color:white;
+  padding: 5px;
+  text-transform: uppercase;
+  font-family: 'Bree Serif', sans-serif;
 }
