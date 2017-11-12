@@ -1,0 +1,57 @@
+<div class="project">
+  <div class="project-inner">
+    <div class="project-media">
+      <?php while( have_rows('media') ) : the_row(); ?>
+        <div class="project-media-item">
+          <?php if (get_sub_field('type') == 'image') : ?>
+            <img
+              class="project-media-image"
+              src="<?php echo get_sub_field('image')['sizes']['panorama']; ?>"
+              alt="<?php echo get_sub_field('image')['alt'] ?>"
+            />
+          <?php else: ?>
+            <div class="l-aspect-ratio-16-9">
+              <?php
+              $iframe = get_sub_field('video');
+              preg_match('/src="(.+?)"/', $iframe, $matches);
+              $src = $matches[1];
+              $new_src = add_query_arg(['color' => 'white', 'rel' => 0, 'showinfo' => 0], $src);
+              echo str_replace($src, $new_src, $iframe);
+              ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endwhile; ?>
+    </div>
+
+
+    <img class="project-img"
+      src="<?php echo get_field('image')['sizes']['panorama']; ?>"
+      alt="<?php echo get_field('image')['alt'] ?>"
+    >
+    <div class="project-body">
+      <h3><?php the_title() ?></h3>
+      <?php if (get_post_type() === 'team'): ?>
+        <div class="project-position">Studio</div>
+      <?php else: ?>
+        <div class="project-position"><?php echo get_field('position'); ?></div>
+      <?php endif ?>
+      <?php get_template_part('partials/social-links'); ?>
+      <div class="project-description"><?php echo get_field('description'); ?></div>
+      <div class="project-bottom-col">
+        <?php if (get_field('creator') && !get_query_var('is_entity_page')) : ?>
+          <div class="project-creator">
+            by
+            <a href="<?php echo get_permalink(get_field('creator')->ID); ?>">
+              <?php echo get_field('creator')->post_title; ?>
+            </a>
+          </div>
+        <?php endif; ?>
+        <div class="project-published">
+          published
+          <b><?php echo get_field('publish_year') ?></b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
