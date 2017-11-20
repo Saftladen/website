@@ -16,11 +16,7 @@
           <div class="entity_content">
             <h2 class="entity_h2">Project<?php echo count(get_field('projects')) != 1 ? "s" : ""?></h2>
             <div class="project-list is-left">
-              <?php
-                $projects = get_field('projects');
-                shuffle($projects)
-              ?>
-              <?php foreach ($projects as $project): ?>
+              <?php foreach (get_field('projects') as $project): ?>
               <?php $post = $project['project']; setup_postdata($post); ?>
                 <?php get_template_part('partials/project'); ?>
               <?php endforeach ?>
