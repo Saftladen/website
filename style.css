@@ -513,13 +513,13 @@ a.polaroid-img-container:hover .polaroid-img {
 .main-footer {
   flex: none;
   width: 100%;
-  padding: 0rem 1rem;
+  padding: 0rem 1rem 3rem;
 }
 
 .main-footer-inner {
   margin: 3rem auto 0;
   border-top: 1px solid #eaeaea;
-  padding: 2rem 0rem 3rem;
+  padding: 2rem 0rem 1rem;
   max-width: 35rem;
   font-size: 0.7rem;
   color: #999;
@@ -546,6 +546,20 @@ a.polaroid-img-container:hover .polaroid-img {
 
 .main-footer-social {
   margin-left: auto;
+}
+
+.main-footer_collective-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+.main-footer_collective-link a {
+  text-decoration: underline;
+}
+
+.main-footer_collective-link a:hover {
+  text-decoration: none;
 }
 
 /* ------------------ PAGES ------------------- */
