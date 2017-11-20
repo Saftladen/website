@@ -324,7 +324,6 @@ a.polaroid-img-container:hover .polaroid-img {
 }
 
 .polaroid-position,
-.polaroid-joined,
 .polaroid-team {
   font-size: 0.8em;
   color: #999;
@@ -332,7 +331,8 @@ a.polaroid-img-container:hover .polaroid-img {
 .polaroid-position {
   margin-bottom: 0.75em;
 }
-.polaroid-joined {
+
+.polaroid-body .social_list {
   margin-top: auto;
 }
 
