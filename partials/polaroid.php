@@ -40,6 +40,11 @@ $link = get_field('projects') && count(get_field('projects')) > 0 ? get_permalin
     <?php else: ?>
       <div class="polaroid-position"><?php echo get_field('position'); ?></div>
     <?php endif ?>
+    <?php if (get_field('team')): ?>
+      <div class="polaroid-team">
+        at <a href="<?php echo get_permalink(get_field('team')->ID); ?>"><?php echo get_field('team')->post_title; ?></a>
+      </div>
+    <?php endif ?>
     <?php get_template_part('partials/social-links'); ?>
     <div class="polaroid-joined">Joined <?php echo get_field('joined_at'); ?></div>
   </div>
