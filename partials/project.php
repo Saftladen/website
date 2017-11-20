@@ -42,14 +42,22 @@
         <?php if (get_field('creator') && !get_query_var('is_entity_page')) : ?>
           <div class="project-creator">
             by
-            <a href="<?php echo get_permalink(get_field('creator')->ID); ?>">
-              <?php echo get_field('creator')->post_title; ?>
+            <?php $i=0; foreach (get_field('creator') as $creator): $i += 1;?>
+            <?php if ($i > 1) : ?>&<?php endif; ?>
+            <a href="<?php echo get_permalink($creator->ID); ?>">
+              <?php echo $creator->post_title; ?>
             </a>
+            <?php endforeach ?>
           </div>
         <?php endif; ?>
+
         <div class="project-published">
+        <?php if (get_field('still_in_production') == true): ?>
+          in production
+        <?php else: ?>
           published
           <b><?php echo get_field('publish_year') ?></b>
+        <?php endif ?>
         </div>
       </div>
     </div>
