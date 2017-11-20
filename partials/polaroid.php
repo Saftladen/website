@@ -46,6 +46,8 @@ $link = get_field('projects') && count(get_field('projects')) > 0 ? get_permalin
       </div>
     <?php endif ?>
     <?php get_template_part('partials/social-links'); ?>
-    <div class="polaroid-joined">Joined <?php echo get_field('joined_at'); ?></div>
+    <?php if (get_field('joined_at')): ?>
+      <div class="polaroid-joined">Joined <?php echo get_field('joined_at'); ?></div>
+    <?php endif ?>
   </div>
 </div>
