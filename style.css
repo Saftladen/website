@@ -493,6 +493,8 @@ a.polaroid-img-container:hover .polaroid-img {
 
 .content-container {
   flex: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .default-page_container {
@@ -686,12 +688,101 @@ body.home .home_faq h2 {
 
 /* TEAM/PERSON */
 
+.entity_container {
+  margin-top: 3rem;
+  display: flex;
+  flex: auto;
+}
+
+.entity_aside {
+  background-color: #f89f39;
+  flex: 250px 1 1;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.entity_aside-content {
+  padding: 3rem 2rem;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  flex: auto;
+}
+
+.entity_title {
+  margin-bottom: 1rem;
+}
+
+.entity_img-container {
+  background-color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.75);
+}
+
+.entity_img-container.is-logo {
+  padding: 0.5rem;
+}
+
+.entity_img {
+  display: block;
+}
+
+.entity_description {
+  margin-bottom: 2rem;
+}
+
+.entity_label {
+  margin-bottom: 0.5em;
+}
+
+.entity_aside-text {
+  margin-bottom: 1em;
+}
+
+.entity_aside .social_list {
+  margin-top: 2rem;
+}
+
+.entity_aside .social_icon {
+  height: 1rem;
+}
+
+.entity_main {
+  flex: 500px 2 1;
+  padding: 3rem;
+}
+
 .entity_content {
   margin-bottom: 2rem;
 }
 
 .entity_h2 {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .entity_container {
+    flex-direction: column;
+  }
+
+  .entity_aside {
+    align-items: center;
+  }
+  .entity_aside,
+  .entity_main {
+    flex: none;
+  }
+
+  .entity_aside-content {
+    max-width: 35rem;
+    align-items: center;
+    text-align: center;
+    flex: none;
+  }
 }
 
 /* ARCHIVE */
