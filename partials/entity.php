@@ -37,7 +37,7 @@
     <?php if ((get_field('projects') && count(get_field('projects')) > 0)) : ?>
       <div class="entity_content">
         <h2 class="entity_h2">Project<?php echo count(get_field('projects')) != 1 ? "s" : ""?></h2>
-        <div class="project-list is-left">
+        <div class="project-list">
           <?php foreach (get_field('projects') as $project): ?>
           <?php $post = $project['project']; setup_postdata($post); ?>
             <?php get_template_part('partials/project'); ?>
@@ -49,7 +49,7 @@
     <?php if ((get_field('people') && count(get_field('people')) > 0)) : ?>
       <div class="entity_content">
         <h2 class="entity_h2">People</h2>
-        <div class="polaroid-list is-left">
+        <div class="polaroid-list">
           <?php
             $members = get_field('people');
             shuffle($members)

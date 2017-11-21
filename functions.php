@@ -1,6 +1,6 @@
 <?php
 
-$VERSION = "1";
+$VERSION = "3";
 
 function resources() {
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Bree+Serif|Ruda:400,700');

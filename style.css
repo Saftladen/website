@@ -276,10 +276,6 @@ img {
   justify-content: center;
 }
 
-.polaroid-list.is-left {
-  justify-content: flex-start;
-}
-
 .polaroid {
   margin: 0 1rem 2rem;
   max-width: 200px;
@@ -764,6 +760,13 @@ body.home .home_faq h2 {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 901px) {
+  .entity_main .polaroid-list,
+  .entity_main .project-list {
+    justify-content: flex-start;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .entity_container {
     flex-direction: column;
@@ -777,11 +780,21 @@ body.home .home_faq h2 {
     flex: none;
   }
 
+  .entity_main,
+  .entity_aside-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .entity_aside-content {
     max-width: 35rem;
     align-items: center;
     text-align: center;
     flex: none;
+  }
+
+  .entity_h2 {
+    text-align: center;
   }
 }
 
