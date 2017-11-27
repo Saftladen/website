@@ -66,6 +66,17 @@
   <?php wp_reset_postdata(); ?>
 </div>
 
+<div class="home_newsletter">
+  <h2>Sign up to our newsletter</h2>
+  <form action="https://berlin.us13.list-manage.com/subscribe/post?u=8de5706e21d76efd1812b70e5&amp;id=e8e15e4aa6" method="post" name="mc-embedded-subscribe-form" target="_blank" class="home_newsletter-form">
+    <label class="home_newsletter-label" for="mce-EMAIL">Your email address </label>
+    <input type="email" value="" name="EMAIL" id="mce-EMAIL" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8de5706e21d76efd1812b70e5_e8e15e4aa6" tabindex="-1" value=""></div>
+    <button type="submit" name="subscribe" class="l-btn">Subscribe</button>
+  </form>
+</div>
+
 <div class="home_faq">
   <h2>FAQ</h2>
   <?php while( have_rows('faq') ) : the_row(); ?>
