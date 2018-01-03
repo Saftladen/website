@@ -5,6 +5,9 @@
       while (have_posts()) : the_post();?>
         <h1 class="default-title"><?php echo the_title(); ?></h1>
         <div class="wp-content default-content"><?php echo the_content(); ?></div>
+        <?php if (get_post_type() === "post"): ?>
+          <a href="/news/" class="l-link">« Back to news overview</a>
+        <?php endif ?>
       <?php
       endwhile;
       else :

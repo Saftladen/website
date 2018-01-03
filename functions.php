@@ -1,8 +1,8 @@
 <?php
 
-$VERSION = "3";
 
 function resources() {
+  $VERSION = "5";
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Bree+Serif|Ruda:400,700');
   wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css');
 
@@ -11,8 +11,7 @@ function resources() {
 	wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 
   wp_enqueue_script('scripts', get_template_directory_uri() . '/scripts.js', ['jquery'], $VERSION, true);
-  wp_enqueue_style('style', get_stylesheet_uri());
-
+  wp_enqueue_style('style', get_stylesheet_uri(), [], $VERSION);
 }
 
 add_action('wp_enqueue_scripts', 'resources');

@@ -53,17 +53,22 @@
 <div class="home_news">
   <h2>Latest news</h2>
   <?php
-    $recent = wp_get_recent_posts(['numberposts' => '1'])
+     $recent = new WP_Query([
+      'posts_per_page'=>1,
+      'order'=>'DESC',
+      'orderby'=>'date'
+     ]);
   ?>
-  <?php foreach ($recent as $post): setup_postdata($post);?>
+  <?php while ($recent->have_posts()) : $recent->the_post(); ?>
     <div class="home_news-entry">
       <div class="home_news-date"><?php the_date() ?></div>
       <h3><?php the_title(); ?></h3>
       <div class="home_news-content wp-content"><?php the_excerpt(); ?></div>
       <a class="home_news-readmore l-link" href="<?php the_permalink(); ?>">Read more</a>
     </div>
-  <?php endforeach ?>
+  <?php endwhile ?>
   <?php wp_reset_postdata(); ?>
+  <a class="home_news-link l-link" href="/news/">See all news</a>
 </div>
 
 <div class="home_newsletter">

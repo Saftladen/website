@@ -10,8 +10,7 @@
           <div class="wp-content home_news-content"><?php echo the_excerpt(); ?></div>
           <a class="home_news-readmore l-link" href="<?php the_permalink(); ?>">Read more</a>
         </div>
-      <?php
-      endwhile;?>
+      <?php endwhile; ?>
       <?php echo paginate_links(); ?>
       <?php
       else :
