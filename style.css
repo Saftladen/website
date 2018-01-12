@@ -600,8 +600,12 @@ body.home h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 4rem 2rem 2rem;
   background-color: #f89f39;
+}
+
+.home_top-image {
+  max-height: 80vh;
 }
 
 .home_intro {
