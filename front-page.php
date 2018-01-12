@@ -12,6 +12,30 @@
 <div class="home_intro wp-content">
   <?php echo get_field('intro_text'); ?>
 </div>
+<div class="home_news">
+  <?php
+     $recent = new WP_Query([
+      'posts_per_page'=>1,
+      'order'=>'DESC',
+      'orderby'=>'date'
+     ]);
+  ?>
+  <?php while ($recent->have_posts()) : $recent->the_post(); ?>
+    <div class="home_news-entry with-title">
+      <div class="home_news-title-area">
+        <h2>Freshly pressed</h2>
+      </div>
+      <div class="home_news-inner">
+        <div class="home_news-date"><?php the_date() ?></div>
+        <h3><?php the_title(); ?></h3>
+        <div class="home_news-content wp-content"><?php the_excerpt(); ?></div>
+        <a class="home_news-readmore l-link" href="<?php the_permalink(); ?>">Read more</a>
+      </div>
+    </div>
+  <?php endwhile ?>
+  <?php wp_reset_postdata(); ?>
+  <a class="home_news-link l-link" href="/news/">See all news</a>
+</div>
 <div class="home_members" id="people">
   <h2>Studios & People</h2>
   <div class="polaroid-list">
@@ -49,26 +73,6 @@
     <?php endforeach ?>
     <?php wp_reset_postdata(); ?>
   </div>
-</div>
-<div class="home_news">
-  <h2>Latest news</h2>
-  <?php
-     $recent = new WP_Query([
-      'posts_per_page'=>1,
-      'order'=>'DESC',
-      'orderby'=>'date'
-     ]);
-  ?>
-  <?php while ($recent->have_posts()) : $recent->the_post(); ?>
-    <div class="home_news-entry">
-      <div class="home_news-date"><?php the_date() ?></div>
-      <h3><?php the_title(); ?></h3>
-      <div class="home_news-content wp-content"><?php the_excerpt(); ?></div>
-      <a class="home_news-readmore l-link" href="<?php the_permalink(); ?>">Read more</a>
-    </div>
-  <?php endwhile ?>
-  <?php wp_reset_postdata(); ?>
-  <a class="home_news-link l-link" href="/news/">See all news</a>
 </div>
 
 <div class="home_newsletter">

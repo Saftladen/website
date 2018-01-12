@@ -717,8 +717,36 @@ body.home h2 {
   margin-bottom: 2rem;
 }
 
+.home_news-entry.with-title {
+  display: flex;
+  padding: 0;
+}
+
+.home_news-inner {
+  padding: 2rem 2rem;
+}
+
 .home_news-entry.has-multiple {
   margin-bottom: 3rem;
+}
+.home_news-title-area {
+  background-color: #f89f39;
+  width: 3rem;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+}
+
+body.home .home_news-title-area h2 {
+  font-family: "Ruda", sans-serif;
+  width: 10rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 100%;
+  transform-origin: bottom left;
+  margin: 0;
+  transform: rotate(270deg);
+  margin-left: -0.8rem;
 }
 
 .home_news-date {
