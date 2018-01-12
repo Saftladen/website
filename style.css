@@ -739,14 +739,14 @@ body.home h2 {
 
 body.home .home_news-title-area h2 {
   font-family: "Ruda", sans-serif;
-  width: 10rem;
+  width: 15rem;
   position: absolute;
   bottom: 2rem;
   left: 100%;
   transform-origin: bottom left;
   margin: 0;
   transform: rotate(270deg);
-  margin-left: -0.8rem;
+  margin-left: -0.7rem;
 }
 
 .home_news-date {

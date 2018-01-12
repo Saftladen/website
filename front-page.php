@@ -23,7 +23,7 @@
   <?php while ($recent->have_posts()) : $recent->the_post(); ?>
     <div class="home_news-entry with-title">
       <div class="home_news-title-area">
-        <h2>Freshly pressed</h2>
+        <h2>Freshly squeezed</h2>
       </div>
       <div class="home_news-inner">
         <div class="home_news-date"><?php the_date() ?></div>
@@ -51,12 +51,6 @@
   </div>
 
 </div>
-<h2 class="home_map-title">Where are we?</h2>
-<div class="home_map" id="map">
-  <?php get_template_part('partials/map'); ?>
-</div>
-<div class="home_map-description wp-content"><?php echo get_field('location_description'); ?></div>
-<?php endwhile; ?>
 <div class="home_projects" id="projects">
   <h2>What we make</h2>
   <div class="project-list">
@@ -98,10 +92,18 @@
   <?php endwhile; ?>
 </div>
 
+<h2 class="home_map-title">Where are we?</h2>
+<div class="home_map" id="map">
+  <?php get_template_part('partials/map'); ?>
+</div>
+<div class="home_map-description wp-content"><?php echo get_field('location_description'); ?></div>
+
+
 <div class="home_twitter">
   <div class="home_twitter-box">
     <a class="twitter-timeline" data-height="1200" data-dnt="true" data-theme="light" href="https://twitter.com/saftladenberlin?ref_src=twsrc%5Etfw">Tweets by saftladenberlin</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </div>
+<?php endwhile; ?>
 <?php get_footer(); ?>
