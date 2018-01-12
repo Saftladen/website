@@ -87,6 +87,7 @@ function setup() {
   add_image_size('tiny', 50, 50);
   add_image_size('polaroid', 400, 634, true);
   add_image_size('logo', 500, 500);
+  add_image_size('fixedheight', 3000, 300);
   add_image_size('panorama', 16 * 40, 9 * 40, true);
   add_image_size('big', 1200, 1200);
 }

@@ -37,7 +37,7 @@
   <a class="home_news-link l-link" href="/news/">See all news</a>
 </div>
 <div class="home_members" id="people">
-  <h2>Studios & People</h2>
+  <h2>Members</h2>
   <div class="polaroid-list">
     <?php
       $members = get_field('entities');
@@ -49,8 +49,23 @@
     <?php endforeach ?>
     <?php wp_reset_postdata(); ?>
   </div>
-
 </div>
+
+<div class="home_members" id="teams">
+  <h2>Studios</h2>
+  <div class="polaroid-list">
+    <?php
+      $teams = get_field('teams');
+      shuffle($teams)
+    ?>
+    <?php foreach ($teams as $team): ?>
+    <?php $post = $team['team']; setup_postdata($post); ?>
+      <?php get_template_part('partials/team'); ?>
+    <?php endforeach ?>
+    <?php wp_reset_postdata(); ?>
+  </div>
+</div>
+
 <div class="home_projects" id="projects">
   <h2>What we make</h2>
   <div class="project-list">
@@ -66,6 +81,9 @@
       <?php get_template_part('partials/project'); ?>
     <?php endforeach ?>
     <?php wp_reset_postdata(); ?>
+  </div>
+  <div class="home_project-more">
+    <button type="button" class="l-btn js-project-more" data-other="See less">Show all projects</button>
   </div>
 </div>
 
@@ -100,10 +118,10 @@
 
 
 <div class="home_twitter">
-  <div class="home_twitter-box">
-    <a class="twitter-timeline" data-height="1200" data-dnt="true" data-theme="light" href="https://twitter.com/saftladenberlin?ref_src=twsrc%5Etfw">Tweets by saftladenberlin</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
+  <h2>Latest Impressions</h2>
+  <p class="home_twitter-intro">Sourced from our <a href="https://twitter.com/saftladenberlin" target="_blank" class="l-link">twitter feed</a></p>
+  <script src="https://snapwidget.com/js/snapwidget.js"></script>
+  <iframe src="https://snapwidget.com/embed/311243" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
 </div>
 <?php endwhile; ?>
 <?php get_footer(); ?>
