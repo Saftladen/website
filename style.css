@@ -469,21 +469,76 @@ a.polaroid-img-container:hover .polaroid-img {
   height: 2rem;
 }
 
-.main-header_nav-menu {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  font-size: 0.7rem;
-  color: #999;
+.main-header-title {
+  font-family: "Bree Serif", serif;
+  font-size: 1.2rem;
+  transition-property: color;
 }
 
-.main-header_nav-menu > .menu-item {
-  display: block;
-  padding: 1em 2em;
+.main-header-title span {
+  display: inline-block;
+}
+.main-header-title:hover span:nth-child(3n + 1) {
+  color: #ff00ff;
+}
+.main-header-title:hover span:nth-child(3n + 2) {
+  color: yellow;
+}
+.main-header-title:hover span:nth-child(3n + 0) {
+  color: cyan;
+}
+.main-header-title:hover span:nth-child(4n + 1) {
+  animation: MoveUpDown 0.6s linear infinite, Rainbow 2s linear infinite;
+}
+.main-header-title:hover span:nth-child(4n + 2) {
+  animation: MoveUpDown 0.6s linear infinite -0.45s, Rainbow 2s linear infinite;
+}
+.main-header-title:hover span:nth-child(4n + 3) {
+  animation: MoveUpDown 0.6s linear infinite -0.3s, Rainbow 2s linear infinite;
+}
+.main-header-title:hover span:nth-child(4n + 0) {
+  animation: MoveUpDown 0.6s linear infinite -0.15s, Rainbow 2s linear infinite;
+}
+.main-header-title:hover span:first-child {
+  animation: MoveUpDownAndRotate 1.2s linear infinite, Rainbow 2s linear infinite;
 }
 
-.main-header_nav-menu > .menu-item > a:hover {
-  text-decoration: underline;
+@keyframes MoveUpDown {
+  25% {
+    transform: translate3d(0, -12%, 0);
+  }
+  75% {
+    transform: translate3d(0, 12%, 0);
+  }
+}
+
+@keyframes MoveUpDownAndRotate {
+  12.5% {
+    transform: translate3d(0, -12%, 0) scaleX(0.5);
+  }
+  37.5% {
+    transform: translate3d(0, 12%, 0) scaleX(-0.5);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scaleX(-1);
+  }
+  62.5% {
+    transform: translate3d(0, -12%, 0) scaleX(-0.5);
+  }
+  87.5% {
+    transform: translate3d(0, 12%, 0) scaleX(0.5);
+  }
+}
+
+@keyframes Rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
 
 .main-header-social {

@@ -23,9 +23,9 @@ setup_postdata($post);
         alt="<?php echo get_field('top_image', $post)['alt'] ?>"
       />
     </a>
-    <nav class="main-header_nav">
-      <?php wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'menu_class' => 'main-header_nav-menu', 'depth' => 1]); ?>
-    </nav>
+    <a href="<?php echo home_url(); ?>" class="main-header-title">
+      <span>S</span><span>a</span><span>f</span><span>t</span><span>l</span><span>a</span><span>d</span><span>e</span><span>n</span>
+    </a>
     <div class="main-header-social">
       <?php get_template_part('partials/social-links'); ?>
     </div>
