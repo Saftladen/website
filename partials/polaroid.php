@@ -1,14 +1,5 @@
-<?php
-$link = get_field('projects') && count(get_field('projects')) > 0 ? get_permalink(get_the_ID()) : null;
-?>
-
-
 <div class="polaroid">
-  <?php if ($link) : ?>
-    <a href="<?php echo $link; ?>" class="polaroid-img-container">
-  <?php else: ?>
-    <div class="polaroid-img-container">
-  <?php endif; ?>
+  <a href="<?php echo get_permalink(get_the_ID()) ?>" class="polaroid-img-container">
     <?php if ( get_field('image') ) : ?>
       <img class="polaroid-img"
         src="<?php echo get_field('image')['sizes']['polaroid']; ?>"
@@ -20,21 +11,13 @@ $link = get_field('projects') && count(get_field('projects')) > 0 ? get_permalin
         alt="<?php the_title() ?>"
       >
     <?php endif; ?>
-  <?php if ($link) : ?>
-    </a>
-  <?php else: ?>
-    </div>
-  <?php endif; ?>
+  </a>
 
 
   <div class="polaroid-body">
-    <?php if ($link) : ?>
-      <a href="<?php echo $link; ?>" class="polaroid-link">
-    <?php endif; ?>
+      <a href="<?php echo get_permalink(get_the_ID()) ?>" class="polaroid-link">
         <h3><?php the_title() ?></h3>
-    <?php if ($link) : ?>
       </a>
-    <?php endif; ?>
     <?php if (get_post_type() === 'team'): ?>
       <div class="polaroid-position">Studio</div>
     <?php else: ?>

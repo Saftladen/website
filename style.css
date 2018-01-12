@@ -858,6 +858,22 @@ body.home .home_faq h2 {
   display: block;
 }
 
+.entity_position {
+  margin-bottom: 0.5rem;
+}
+
+.entity_team {
+  margin-bottom: 1rem;
+}
+
+.entity_team a {
+  text-decoration: underline;
+}
+
+.entity_team a:hover {
+  text-decoration: none;
+}
+
 .entity_description {
   margin-bottom: 2rem;
 }

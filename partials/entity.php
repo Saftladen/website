@@ -19,6 +19,14 @@
             alt="<?php the_title() ?>"
           >
         </div>
+      <?php if ( get_field('position') ) : ?>
+        <h3 class="entity_position"><?php echo get_field('position'); ?></h3>
+      <?php endif; ?>
+      <?php if (get_field('team')): ?>
+        <div class="entity_team">
+          at <a href="<?php echo get_permalink(get_field('team')->ID); ?>"><?php echo get_field('team')->post_title; ?></a>
+        </div>
+      <?php endif ?>
       <?php if ( get_field('description') ) : ?>
         <div class="entity_description wp-content"><?php echo get_field('description'); ?></div>
       <?php endif; ?>
@@ -34,9 +42,9 @@
     </div>
   </div>
   <div class="entity_main">
-    <?php if ((get_field('projects') && count(get_field('projects')) > 0)) : ?>
       <div class="entity_content">
-        <h2 class="entity_h2">Project<?php echo count(get_field('projects')) != 1 ? "s" : ""?></h2>
+        <h2 class="entity_h2">Project<?php echo (!get_field('projects') || count(get_field('projects')) != 1) ? "s" : ""?></h2>
+        <?php if ((get_field('projects') && count(get_field('projects')) > 0)) : ?>
         <div class="project-list">
           <?php foreach (get_field('projects') as $project): ?>
           <?php $post = $project['project']; setup_postdata($post); ?>
@@ -44,8 +52,10 @@
           <?php endforeach ?>
           <?php wp_reset_postdata(); ?>
         </div>
+        <?php else: ?>
+          None
+        <?php endif; ?>
       </div>
-      <?php endif; ?>
     <?php if ((get_field('people') && count(get_field('people')) > 0)) : ?>
       <div class="entity_content">
         <h2 class="entity_h2">People</h2>
