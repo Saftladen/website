@@ -288,7 +288,7 @@ textarea {
 
 .polaroid {
   margin: 0 1rem 2rem;
-  max-width: 200px;
+  flex: 200px 0 1;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -519,7 +519,8 @@ a.polaroid-img-container:hover .polaroid-img {
   animation: MoveUpDown 0.6s linear infinite -0.15s, Rainbow 2s linear infinite;
 }
 .main-header-title:hover span:first-child {
-  animation: MoveUpDownAndRotate 1.2s linear infinite, Rainbow 2s linear infinite;
+  animation: MoveUpDownAndRotate 1.2s linear infinite,
+    Rainbow 2s linear infinite;
 }
 
 @keyframes MoveUpDown {
@@ -1037,4 +1038,11 @@ div.wpcf7-validation-errors {
 div.wpcf7-mail-sent-ok {
   color: #0bbbef;
   border: 2px solid #0bbbef;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+body.page-id-326 .grecaptcha-badge {
+  visibility: visible;
 }
