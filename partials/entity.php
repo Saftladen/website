@@ -56,22 +56,6 @@
           None
         <?php endif; ?>
       </div>
-    <?php if ((get_field('people') && count(get_field('people')) > 0)) : ?>
-      <div class="entity_content">
-        <h2 class="entity_h2">People</h2>
-        <div class="polaroid-list">
-          <?php
-            $members = get_field('people');
-            shuffle($members)
-          ?>
-          <?php foreach ($members as $member): ?>
-          <?php $post = $member['person']; setup_postdata($post); ?>
-            <?php get_template_part('partials/polaroid'); ?>
-          <?php endforeach ?>
-          <?php wp_reset_postdata(); ?>
-        </div>
-      </div>
-    <?php endif; ?>
     </div>
   </div>
 </div>

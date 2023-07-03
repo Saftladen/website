@@ -36,7 +36,7 @@
   <?php wp_reset_postdata(); ?>
   <a class="home_news-link l-link" href="/news/">See all news</a>
 </div>
-<div class="home_members" id="people">
+<!-- <div class="home_members" id="people">
   <h2>Members</h2>
   <div class="polaroid-list">
     <?php
@@ -49,7 +49,7 @@
     <?php endforeach ?>
     <?php wp_reset_postdata(); ?>
   </div>
-</div>
+</div> -->
 
 <div class="home_members" id="teams">
   <h2>Studios</h2>
