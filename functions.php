@@ -2,7 +2,7 @@
 
 
 function resources() {
-  $VERSION = "7";
+  $VERSION = "8";
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Bree+Serif|Ruda:400,700');
   wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css');
 
@@ -94,3 +94,5 @@ function setup() {
 
 add_action('after_setup_theme', 'setup');
 add_action('admin_menu', 'remove_menu');
+
+?>

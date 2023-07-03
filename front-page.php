@@ -20,7 +20,7 @@
       'orderby'=>'date'
      ]);
   ?>
-  <?php while ($recent->have_posts()) : $recent->the_post(); ?>
+  <!-- <?php while ($recent->have_posts()) : $recent->the_post(); ?>
     <div class="home_news-entry with-title">
       <div class="home_news-title-area">
         <h2>Freshly squeezed</h2>
@@ -32,7 +32,7 @@
         <a class="home_news-readmore l-link" href="<?php the_permalink(); ?>">Read more</a>
       </div>
     </div>
-  <?php endwhile ?>
+  <?php endwhile ?> -->
   <?php wp_reset_postdata(); ?>
   <a class="home_news-link l-link" href="/news/">See all news</a>
 </div>
@@ -111,11 +111,11 @@
 <div class="home_map-description wp-content"><?php echo get_field('location_description'); ?></div>
 
 
-<div class="home_twitter">
+<!-- <div class="home_twitter">
   <h2>Latest Impressions</h2>
   <p class="home_twitter-intro">Sourced from our <a href="https://twitter.com/saftladenberlin" target="_blank" class="l-link">twitter feed</a></p>
   <script src="https://snapwidget.com/js/snapwidget.js"></script>
   <iframe src="https://snapwidget.com/embed/311243" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-</div>
+</div> -->
 <?php endwhile; ?>
 <?php get_footer(); ?>

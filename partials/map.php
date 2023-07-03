@@ -1,6 +1,6 @@
 <script>
 function initMap() {
-  var position = {lat: 52.500048, lng: 13.419218};
+  var position = {lat: 52.5160074, lng: 13.480159};
   var styles = [
     {
       "elementType": "geometry",

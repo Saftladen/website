@@ -900,6 +900,8 @@ body.home .home_faq h2 {
   background-color: #fff;
   margin-bottom: 2rem;
   box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  max-width: 12rem;
 }
 
 .entity_img-container.is-logo {
